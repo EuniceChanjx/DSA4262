@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2f5f5c2680061215f554fa8d5ef97999 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    width: 200px;
+    background-color: white;
+    border: 2px solid grey;
+    z-index: 9999;
+    font-size: 14px;
+    padding: 10px;
+">
+<b>Clinic Type</b><br>
+<span style="color: blue;">●</span> General + Mental Health<br>
+<span style="color: green;">●</span> Mental Health Only<br>
+<span style="color: red;">●</span> Dementia Only<br>
+<span style="color: black;">●</span> Other Polyclinics (White)
+</div>
+    
+            <div class="folium-map" id="map_2f5f5c2680061215f554fa8d5ef97999" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2f5f5c2680061215f554fa8d5ef97999 = L.map(
+                "map_2f5f5c2680061215f554fa8d5ef97999",
+                {
+                    center: [1.3521, 103.8198],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d43f808bab501f2781de7342d5ee5780 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d43f808bab501f2781de7342d5ee5780.addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+            var circle_marker_15252e1a6314373b2480cfc94f178948 = L.circleMarker(
+                [1.372483, 103.847165],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_9059c4888bf7bf271bff3b0adf9b0734 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_589c402f3957e4764dd249c5ce2708c8 = $(`<div id="html_589c402f3957e4764dd249c5ce2708c8" style="width: 100.0%; height: 100.0%;">Ang Mo Kio Polyclinic (general)</div>`)[0];
+                popup_9059c4888bf7bf271bff3b0adf9b0734.setContent(html_589c402f3957e4764dd249c5ce2708c8);
+            
+        
+
+        circle_marker_15252e1a6314373b2480cfc94f178948.bindPopup(popup_9059c4888bf7bf271bff3b0adf9b0734)
+        ;
+
+        
+    
+    
+            var circle_marker_e161318fef461c1829662318987ab61a = L.circleMarker(
+                [1.32694, 103.93161],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_12c856668bda02f4a0a0794dfea30ae8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_894c170c0381859a9dc4730740dce741 = $(`<div id="html_894c170c0381859a9dc4730740dce741" style="width: 100.0%; height: 100.0%;">Bedok Polyclinic (general)</div>`)[0];
+                popup_12c856668bda02f4a0a0794dfea30ae8.setContent(html_894c170c0381859a9dc4730740dce741);
+            
+        
+
+        circle_marker_e161318fef461c1829662318987ab61a.bindPopup(popup_12c856668bda02f4a0a0794dfea30ae8)
+        ;
+
+        
+    
+    
+            var circle_marker_7dbf82dce02f7f96d7b75974317c6ddb = L.circleMarker(
+                [1.3517, 103.7477],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_8fa603e51a82f18545a906475e150a65 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad0f52d7f2f8fef81367468d8c8005a9 = $(`<div id="html_ad0f52d7f2f8fef81367468d8c8005a9" style="width: 100.0%; height: 100.0%;">Bukit Batok Polyclinic (general)</div>`)[0];
+                popup_8fa603e51a82f18545a906475e150a65.setContent(html_ad0f52d7f2f8fef81367468d8c8005a9);
+            
+        
+
+        circle_marker_7dbf82dce02f7f96d7b75974317c6ddb.bindPopup(popup_8fa603e51a82f18545a906475e150a65)
+        ;
+
+        
+    
+    
+            var circle_marker_93596e25201c23e6ae74a68b0d2ab15d = L.circleMarker(
+                [1.2836914, 103.8170178],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_61f322bd2fbcb76d5a2092c89c1676c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f06026271a2b6d3c81bc37b96db017c = $(`<div id="html_6f06026271a2b6d3c81bc37b96db017c" style="width: 100.0%; height: 100.0%;">Bukit Merah Polyclinic (mental)</div>`)[0];
+                popup_61f322bd2fbcb76d5a2092c89c1676c3.setContent(html_6f06026271a2b6d3c81bc37b96db017c);
+            
+        
+
+        circle_marker_93596e25201c23e6ae74a68b0d2ab15d.bindPopup(popup_61f322bd2fbcb76d5a2092c89c1676c3)
+        ;
+
+        
+    
+    
+            var circle_marker_cdce885f0a8d0ac8997627fa9d9ccfd5 = L.circleMarker(
+                [1.382, 103.763],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_1d583824a1f737385eded44cc21e10dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a46b3ff156b0e35b28ce9b51b94f0b5e = $(`<div id="html_a46b3ff156b0e35b28ce9b51b94f0b5e" style="width: 100.0%; height: 100.0%;">Bukit Panjang Polyclinic (general)</div>`)[0];
+                popup_1d583824a1f737385eded44cc21e10dd.setContent(html_a46b3ff156b0e35b28ce9b51b94f0b5e);
+            
+        
+
+        circle_marker_cdce885f0a8d0ac8997627fa9d9ccfd5.bindPopup(popup_1d583824a1f737385eded44cc21e10dd)
+        ;
+
+        
+    
+    
+            var circle_marker_9f4c939379191347218a54f92f70361b = L.circleMarker(
+                [1.385, 103.746],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_bb7997928eb9944483b2257a8d630c92 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b1b99af876ac5cfaff2d0cfd1b9cd25 = $(`<div id="html_5b1b99af876ac5cfaff2d0cfd1b9cd25" style="width: 100.0%; height: 100.0%;">Choa Chu Kang Polyclinic (dementia)</div>`)[0];
+                popup_bb7997928eb9944483b2257a8d630c92.setContent(html_5b1b99af876ac5cfaff2d0cfd1b9cd25);
+            
+        
+
+        circle_marker_9f4c939379191347218a54f92f70361b.bindPopup(popup_bb7997928eb9944483b2257a8d630c92)
+        ;
+
+        
+    
+    
+            var circle_marker_aba93cd8cc403cf57e1b5ed6e6389b75 = L.circleMarker(
+                [1.315, 103.765],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_85d79ac9ec04caefcd33afb00234dce8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f00888b1090294e492a7499f523b077a = $(`<div id="html_f00888b1090294e492a7499f523b077a" style="width: 100.0%; height: 100.0%;">Clementi Polyclinic (general)</div>`)[0];
+                popup_85d79ac9ec04caefcd33afb00234dce8.setContent(html_f00888b1090294e492a7499f523b077a);
+            
+        
+
+        circle_marker_aba93cd8cc403cf57e1b5ed6e6389b75.bindPopup(popup_85d79ac9ec04caefcd33afb00234dce8)
+        ;
+
+        
+    
+    
+            var circle_marker_567e061d7068e6bff5011bee4841209a = L.circleMarker(
+                [1.323, 103.9],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_b68f2e2c8b157ff64ca382c2cb0f1f88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_661d1e6bb8f7d123276c2ba6788a5d87 = $(`<div id="html_661d1e6bb8f7d123276c2ba6788a5d87" style="width: 100.0%; height: 100.0%;">Eunos Polyclinic (general)</div>`)[0];
+                popup_b68f2e2c8b157ff64ca382c2cb0f1f88.setContent(html_661d1e6bb8f7d123276c2ba6788a5d87);
+            
+        
+
+        circle_marker_567e061d7068e6bff5011bee4841209a.bindPopup(popup_b68f2e2c8b157ff64ca382c2cb0f1f88)
+        ;
+
+        
+    
+    
+            var circle_marker_fe3189b37035146c0987b438d3104596 = L.circleMarker(
+                [1.318, 103.888],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_e798a41a72b2967597ac93312a2de741 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d802085385c43226d462ee9f1c9a4e3f = $(`<div id="html_d802085385c43226d462ee9f1c9a4e3f" style="width: 100.0%; height: 100.0%;">Geylang Polyclinic (mental)</div>`)[0];
+                popup_e798a41a72b2967597ac93312a2de741.setContent(html_d802085385c43226d462ee9f1c9a4e3f);
+            
+        
+
+        circle_marker_fe3189b37035146c0987b438d3104596.bindPopup(popup_e798a41a72b2967597ac93312a2de741)
+        ;
+
+        
+    
+    
+            var circle_marker_ac623a199716bf3f4797155018c2a68f = L.circleMarker(
+                [1.37, 103.892],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_bfe4c173ee4cd36aeff222f997077a6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d926943cb383eef7ec3086c21e3fa187 = $(`<div id="html_d926943cb383eef7ec3086c21e3fa187" style="width: 100.0%; height: 100.0%;">Hougang Polyclinic (general)</div>`)[0];
+                popup_bfe4c173ee4cd36aeff222f997077a6c.setContent(html_d926943cb383eef7ec3086c21e3fa187);
+            
+        
+
+        circle_marker_ac623a199716bf3f4797155018c2a68f.bindPopup(popup_bfe4c173ee4cd36aeff222f997077a6c)
+        ;
+
+        
+    
+    
+            var circle_marker_8dd570999eed24521e39891f1c38d32f = L.circleMarker(
+                [1.347, 103.71],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_5cd18c975ee91f82cf3b5972a554707f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdebf466ab1bf2c89c56e4e95eeffe52 = $(`<div id="html_cdebf466ab1bf2c89c56e4e95eeffe52" style="width: 100.0%; height: 100.0%;">Jurong Polyclinic (general)</div>`)[0];
+                popup_5cd18c975ee91f82cf3b5972a554707f.setContent(html_cdebf466ab1bf2c89c56e4e95eeffe52);
+            
+        
+
+        circle_marker_8dd570999eed24521e39891f1c38d32f.bindPopup(popup_5cd18c975ee91f82cf3b5972a554707f)
+        ;
+
+        
+    
+    
+            var circle_marker_e2736ed1f077bb0469e9a3571aa04401 = L.circleMarker(
+                [1.313, 103.864],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_6cf9c1fc1b0e711cf67006266135b1f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65753fee3c91487bb19b0a0f63153578 = $(`<div id="html_65753fee3c91487bb19b0a0f63153578" style="width: 100.0%; height: 100.0%;">Kallang Polyclinic (general)</div>`)[0];
+                popup_6cf9c1fc1b0e711cf67006266135b1f9.setContent(html_65753fee3c91487bb19b0a0f63153578);
+            
+        
+
+        circle_marker_e2736ed1f077bb0469e9a3571aa04401.bindPopup(popup_6cf9c1fc1b0e711cf67006266135b1f9)
+        ;
+
+        
+    
+    
+            var circle_marker_d2813e40b2dfaf4d8d41115e394fb614 = L.circleMarker(
+                [1.425, 103.778],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_0ac9492214efefdede5f104f3e57e1e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c6933aca54c98ed28cec97f71c1f33d = $(`<div id="html_5c6933aca54c98ed28cec97f71c1f33d" style="width: 100.0%; height: 100.0%;">Khatib Polyclinic (dementia)</div>`)[0];
+                popup_0ac9492214efefdede5f104f3e57e1e9.setContent(html_5c6933aca54c98ed28cec97f71c1f33d);
+            
+        
+
+        circle_marker_d2813e40b2dfaf4d8d41115e394fb614.bindPopup(popup_0ac9492214efefdede5f104f3e57e1e9)
+        ;
+
+        
+    
+    
+            var circle_marker_1528c4943bf8c3819b5e05658f7b9ccb = L.circleMarker(
+                [1.28, 103.837],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_6db0e231cc312a59d33b60aace45eafe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2176bbd69f15fb41d8e5eca7068079c = $(`<div id="html_c2176bbd69f15fb41d8e5eca7068079c" style="width: 100.0%; height: 100.0%;">Outram Polyclinic (general)</div>`)[0];
+                popup_6db0e231cc312a59d33b60aace45eafe.setContent(html_c2176bbd69f15fb41d8e5eca7068079c);
+            
+        
+
+        circle_marker_1528c4943bf8c3819b5e05658f7b9ccb.bindPopup(popup_6db0e231cc312a59d33b60aace45eafe)
+        ;
+
+        
+    
+    
+            var circle_marker_5abe94f12acb8b916d620f83a888f12c = L.circleMarker(
+                [1.345, 103.683],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_11f9e8461c57ec752528f80925bd2b0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddd2143cf8b4759a7c91b9a182cba260 = $(`<div id="html_ddd2143cf8b4759a7c91b9a182cba260" style="width: 100.0%; height: 100.0%;">Pioneer Polyclinic (general)</div>`)[0];
+                popup_11f9e8461c57ec752528f80925bd2b0c.setContent(html_ddd2143cf8b4759a7c91b9a182cba260);
+            
+        
+
+        circle_marker_5abe94f12acb8b916d620f83a888f12c.bindPopup(popup_11f9e8461c57ec752528f80925bd2b0c)
+        ;
+
+        
+    
+    
+            var circle_marker_841d57601bcf971c92d1f694e7c787f7 = L.circleMarker(
+                [1.40316, 103.91317],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_0c5da4ea09c35626ca764f619c34d067 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b06f7166648412573232e12e1255a88 = $(`<div id="html_0b06f7166648412573232e12e1255a88" style="width: 100.0%; height: 100.0%;">Punggol Polyclinic (general)</div>`)[0];
+                popup_0c5da4ea09c35626ca764f619c34d067.setContent(html_0b06f7166648412573232e12e1255a88);
+            
+        
+
+        circle_marker_841d57601bcf971c92d1f694e7c787f7.bindPopup(popup_0c5da4ea09c35626ca764f619c34d067)
+        ;
+
+        
+    
+    
+            var circle_marker_76c3344ccbcf83e62d1011722bac3cd5 = L.circleMarker(
+                [1.293, 103.799],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_20378e971a00dcb53d8c8a9695c2db64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96a2c76892bd05b67c9b73ac2cdabaff = $(`<div id="html_96a2c76892bd05b67c9b73ac2cdabaff" style="width: 100.0%; height: 100.0%;">Queenstown Polyclinic (mental)</div>`)[0];
+                popup_20378e971a00dcb53d8c8a9695c2db64.setContent(html_96a2c76892bd05b67c9b73ac2cdabaff);
+            
+        
+
+        circle_marker_76c3344ccbcf83e62d1011722bac3cd5.bindPopup(popup_20378e971a00dcb53d8c8a9695c2db64)
+        ;
+
+        
+    
+    
+            var circle_marker_7116a1b3b517602ac3941a2cdc22e343 = L.circleMarker(
+                [1.45, 103.82],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_0d66280b6fe0af1badba03ba6977752f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0727522504cc2eb0b1f80773fac5ea77 = $(`<div id="html_0727522504cc2eb0b1f80773fac5ea77" style="width: 100.0%; height: 100.0%;">Sembawang Polyclinic (general)</div>`)[0];
+                popup_0d66280b6fe0af1badba03ba6977752f.setContent(html_0727522504cc2eb0b1f80773fac5ea77);
+            
+        
+
+        circle_marker_7116a1b3b517602ac3941a2cdc22e343.bindPopup(popup_0d66280b6fe0af1badba03ba6977752f)
+        ;
+
+        
+    
+    
+            var circle_marker_161fdaa99a896eb72653745c83f916be = L.circleMarker(
+                [1.353, 103.945],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_50ea8c6243b14a802ad0fbad8f99a151 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a742b31540afc194cb9a115862f02284 = $(`<div id="html_a742b31540afc194cb9a115862f02284" style="width: 100.0%; height: 100.0%;">Tampines Polyclinic (general)</div>`)[0];
+                popup_50ea8c6243b14a802ad0fbad8f99a151.setContent(html_a742b31540afc194cb9a115862f02284);
+            
+        
+
+        circle_marker_161fdaa99a896eb72653745c83f916be.bindPopup(popup_50ea8c6243b14a802ad0fbad8f99a151)
+        ;
+
+        
+    
+    
+            var circle_marker_9952981f97346efe0d720d8502d04db9 = L.circleMarker(
+                [1.334, 103.85],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_770bdce924767d55163574250ef20d3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a8b60a53bb4154d89d0523858140a5f = $(`<div id="html_1a8b60a53bb4154d89d0523858140a5f" style="width: 100.0%; height: 100.0%;">Toa Payoh Polyclinic (general)</div>`)[0];
+                popup_770bdce924767d55163574250ef20d3a.setContent(html_1a8b60a53bb4154d89d0523858140a5f);
+            
+        
+
+        circle_marker_9952981f97346efe0d720d8502d04db9.bindPopup(popup_770bdce924767d55163574250ef20d3a)
+        ;
+
+        
+    
+    
+            var circle_marker_9636c99ec9012f6f2405fd9206c414cc = L.circleMarker(
+                [1.437, 103.786],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_4652f54ded2bae10c773b72a75501656 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7352c95b98405254facc678fdddd7c61 = $(`<div id="html_7352c95b98405254facc678fdddd7c61" style="width: 100.0%; height: 100.0%;">Woodlands Polyclinic (general)</div>`)[0];
+                popup_4652f54ded2bae10c773b72a75501656.setContent(html_7352c95b98405254facc678fdddd7c61);
+            
+        
+
+        circle_marker_9636c99ec9012f6f2405fd9206c414cc.bindPopup(popup_4652f54ded2bae10c773b72a75501656)
+        ;
+
+        
+    
+    
+            var circle_marker_b50a516557a269d8e2982e957ae46aba = L.circleMarker(
+                [1.428, 103.835],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_c605b999a4e77b08b4514f0d82e45e1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31a80f2c394bc48f9bd5ba446b39e0ac = $(`<div id="html_31a80f2c394bc48f9bd5ba446b39e0ac" style="width: 100.0%; height: 100.0%;">Yishun Polyclinic (dementia)</div>`)[0];
+                popup_c605b999a4e77b08b4514f0d82e45e1a.setContent(html_31a80f2c394bc48f9bd5ba446b39e0ac);
+            
+        
+
+        circle_marker_b50a516557a269d8e2982e957ae46aba.bindPopup(popup_c605b999a4e77b08b4514f0d82e45e1a)
+        ;
+
+        
+    
+    
+            var circle_marker_f921f70ac567a5458cb19625f774080d = L.circleMarker(
+                [1.35, 103.873],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_9a55b1443b603e97621c3859af289026 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_051a1f38fcbba329c601cf7f24cc5efe = $(`<div id="html_051a1f38fcbba329c601cf7f24cc5efe" style="width: 100.0%; height: 100.0%;">Serangoon Polyclinic (other)</div>`)[0];
+                popup_9a55b1443b603e97621c3859af289026.setContent(html_051a1f38fcbba329c601cf7f24cc5efe);
+            
+        
+
+        circle_marker_f921f70ac567a5458cb19625f774080d.bindPopup(popup_9a55b1443b603e97621c3859af289026)
+        ;
+
+        
+    
+    
+            var circle_marker_4d4b332b792b8d30691513c3d542b542 = L.circleMarker(
+                [1.302, 103.906],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_48210825899ddedb5d3337e95bcbec91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f05a3651024b0656ff322176649dfc0e = $(`<div id="html_f05a3651024b0656ff322176649dfc0e" style="width: 100.0%; height: 100.0%;">Marine Parade Polyclinic (other)</div>`)[0];
+                popup_48210825899ddedb5d3337e95bcbec91.setContent(html_f05a3651024b0656ff322176649dfc0e);
+            
+        
+
+        circle_marker_4d4b332b792b8d30691513c3d542b542.bindPopup(popup_48210825899ddedb5d3337e95bcbec91)
+        ;
+
+        
+    
+    
+            var circle_marker_8c90f4553e6456a6dc34038b147c1a1e = L.circleMarker(
+                [1.373, 103.949],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_1416e679906bc2b463f482f9e03efc10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84540a43629f59d7f836567a5fdeef99 = $(`<div id="html_84540a43629f59d7f836567a5fdeef99" style="width: 100.0%; height: 100.0%;">Pasir Ris Polyclinic (other)</div>`)[0];
+                popup_1416e679906bc2b463f482f9e03efc10.setContent(html_84540a43629f59d7f836567a5fdeef99);
+            
+        
+
+        circle_marker_8c90f4553e6456a6dc34038b147c1a1e.bindPopup(popup_1416e679906bc2b463f482f9e03efc10)
+        ;
+
+        
+    
+    
+            var circle_marker_0bec2123dfb3c96c3ced65af693b005e = L.circleMarker(
+                [1.3508, 103.8485],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_a7a12a938d67e1c89d91f24458c6f4ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e9d6be7c2a7f8e87060df1e6a5ea4df = $(`<div id="html_4e9d6be7c2a7f8e87060df1e6a5ea4df" style="width: 100.0%; height: 100.0%;">Bishan Polyclinic (other)</div>`)[0];
+                popup_a7a12a938d67e1c89d91f24458c6f4ac.setContent(html_4e9d6be7c2a7f8e87060df1e6a5ea4df);
+            
+        
+
+        circle_marker_0bec2123dfb3c96c3ced65af693b005e.bindPopup(popup_a7a12a938d67e1c89d91f24458c6f4ac)
+        ;
+
+        
+    
+    
+            var circle_marker_18abdbc788f11374a6a401dee4b7459e = L.circleMarker(
+                [1.32, 103.844],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_f9f2a7d83c5e0f03aea23f35772c55e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf1b25205d40357aa1ef2e37c451dbeb = $(`<div id="html_bf1b25205d40357aa1ef2e37c451dbeb" style="width: 100.0%; height: 100.0%;">Novena Polyclinic (other)</div>`)[0];
+                popup_f9f2a7d83c5e0f03aea23f35772c55e4.setContent(html_bf1b25205d40357aa1ef2e37c451dbeb);
+            
+        
+
+        circle_marker_18abdbc788f11374a6a401dee4b7459e.bindPopup(popup_f9f2a7d83c5e0f03aea23f35772c55e4)
+        ;
+
+        
+    
+    
+            var circle_marker_7b2af0fcf52e37abc790e99242784cf5 = L.circleMarker(
+                [1.354, 103.836],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_da91a4ba6e3d49f5657e142f95067307 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34e7592ce06c2dfac9b74c05339de3a8 = $(`<div id="html_34e7592ce06c2dfac9b74c05339de3a8" style="width: 100.0%; height: 100.0%;">Upper Thomson Polyclinic (other)</div>`)[0];
+                popup_da91a4ba6e3d49f5657e142f95067307.setContent(html_34e7592ce06c2dfac9b74c05339de3a8);
+            
+        
+
+        circle_marker_7b2af0fcf52e37abc790e99242784cf5.bindPopup(popup_da91a4ba6e3d49f5657e142f95067307)
+        ;
+
+        
+    
+    
+            var circle_marker_664a6c545f2ccbc10691b0fff9890e5a = L.circleMarker(
+                [1.272, 103.807],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_c52b897f8ef58648e4428cb377786546 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e89aaca083d49889263390c6234f37f = $(`<div id="html_5e89aaca083d49889263390c6234f37f" style="width: 100.0%; height: 100.0%;">Telok Blangah Polyclinic (other)</div>`)[0];
+                popup_c52b897f8ef58648e4428cb377786546.setContent(html_5e89aaca083d49889263390c6234f37f);
+            
+        
+
+        circle_marker_664a6c545f2ccbc10691b0fff9890e5a.bindPopup(popup_c52b897f8ef58648e4428cb377786546)
+        ;
+
+        
+    
+    
+            var circle_marker_f9e241ac1befb0362d4b9d4f5eb08595 = L.circleMarker(
+                [1.284, 103.843],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_51e5f37f0cdd47505a69fe7ba84e2adf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f16bad017e87a008d6f6e6fb5f4a729e = $(`<div id="html_f16bad017e87a008d6f6e6fb5f4a729e" style="width: 100.0%; height: 100.0%;">Chinatown Polyclinic (other)</div>`)[0];
+                popup_51e5f37f0cdd47505a69fe7ba84e2adf.setContent(html_f16bad017e87a008d6f6e6fb5f4a729e);
+            
+        
+
+        circle_marker_f9e241ac1befb0362d4b9d4f5eb08595.bindPopup(popup_51e5f37f0cdd47505a69fe7ba84e2adf)
+        ;
+
+        
+    
+    
+            var circle_marker_7a22d082ed0d6a27c3218cddb119d764 = L.circleMarker(
+                [1.326, 103.889],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_90bf517483ca073790d1f7d5a4a9218c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91531939452c4b75b002f330d588ea7b = $(`<div id="html_91531939452c4b75b002f330d588ea7b" style="width: 100.0%; height: 100.0%;">MacPherson Polyclinic (other)</div>`)[0];
+                popup_90bf517483ca073790d1f7d5a4a9218c.setContent(html_91531939452c4b75b002f330d588ea7b);
+            
+        
+
+        circle_marker_7a22d082ed0d6a27c3218cddb119d764.bindPopup(popup_90bf517483ca073790d1f7d5a4a9218c)
+        ;
+
+        
+    
+    
+            var circle_marker_2dd74447e99b64b6674983bc8c0f3417 = L.circleMarker(
+                [1.351, 103.863],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_3e2f439c1438927a9ac04e6d8b319c6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_574220ba891c72e4fa1b003bc0ee016c = $(`<div id="html_574220ba891c72e4fa1b003bc0ee016c" style="width: 100.0%; height: 100.0%;">Lorong Chuan Polyclinic (other)</div>`)[0];
+                popup_3e2f439c1438927a9ac04e6d8b319c6e.setContent(html_574220ba891c72e4fa1b003bc0ee016c);
+            
+        
+
+        circle_marker_2dd74447e99b64b6674983bc8c0f3417.bindPopup(popup_3e2f439c1438927a9ac04e6d8b319c6e)
+        ;
+
+        
+    
+    
+            var circle_marker_3486e54451575af4db617c0a0ada69da = L.circleMarker(
+                [1.3917, 103.895],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_0d0cd0ee5058922efb9a5642eeedbccd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d71e729c620dbdc848ccc323dad9ef4b = $(`<div id="html_d71e729c620dbdc848ccc323dad9ef4b" style="width: 100.0%; height: 100.0%;">Sengkang Polyclinic (other)</div>`)[0];
+                popup_0d0cd0ee5058922efb9a5642eeedbccd.setContent(html_d71e729c620dbdc848ccc323dad9ef4b);
+            
+        
+
+        circle_marker_3486e54451575af4db617c0a0ada69da.bindPopup(popup_0d0cd0ee5058922efb9a5642eeedbccd)
+        ;
+
+        
+    
+    
+            var circle_marker_5a67e0ec5efd7536920bdb241e6fd4e5 = L.circleMarker(
+                [1.333, 103.743],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_5f5b5723111b7063de174ad551f2de05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73141f8c5acddfd6aa2084d1bb3ab37c = $(`<div id="html_73141f8c5acddfd6aa2084d1bb3ab37c" style="width: 100.0%; height: 100.0%;">Jurong East Polyclinic (other)</div>`)[0];
+                popup_5f5b5723111b7063de174ad551f2de05.setContent(html_73141f8c5acddfd6aa2084d1bb3ab37c);
+            
+        
+
+        circle_marker_5a67e0ec5efd7536920bdb241e6fd4e5.bindPopup(popup_5f5b5723111b7063de174ad551f2de05)
+        ;
+
+        
+    
+    
+            var circle_marker_e6489138d392b4171e0c4a043d054d17 = L.circleMarker(
+                [1.338, 103.706],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_9418ef4e1dfb215326cb4f9835b559e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_edaa298acc00834f09d1cabfe750a9ec = $(`<div id="html_edaa298acc00834f09d1cabfe750a9ec" style="width: 100.0%; height: 100.0%;">Boon Lay Polyclinic (other)</div>`)[0];
+                popup_9418ef4e1dfb215326cb4f9835b559e9.setContent(html_edaa298acc00834f09d1cabfe750a9ec);
+            
+        
+
+        circle_marker_e6489138d392b4171e0c4a043d054d17.bindPopup(popup_9418ef4e1dfb215326cb4f9835b559e9)
+        ;
+
+        
+    
+    
+            var circle_marker_8b75706d1c183b6d9d81040ab97ea5fc = L.circleMarker(
+                [1.3294, 103.8021],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2f5f5c2680061215f554fa8d5ef97999);
+        
+    
+        var popup_78bdb00fd14df7b27a369c1e74165019 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bcd83db9a93c381d6bfaba1e6c3a38d9 = $(`<div id="html_bcd83db9a93c381d6bfaba1e6c3a38d9" style="width: 100.0%; height: 100.0%;">Bukit Timah Polyclinic (other)</div>`)[0];
+                popup_78bdb00fd14df7b27a369c1e74165019.setContent(html_bcd83db9a93c381d6bfaba1e6c3a38d9);
+            
+        
+
+        circle_marker_8b75706d1c183b6d9d81040ab97ea5fc.bindPopup(popup_78bdb00fd14df7b27a369c1e74165019)
+        ;
+
+        
+    
+</script>
+</html>

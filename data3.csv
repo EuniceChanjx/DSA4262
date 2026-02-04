@@ -1,0 +1,10 @@
+population_group_id,population_group_name,measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,559,Schizophrenia,1,Number,2023,31279.39371499624,38842.53081828703,24278.484052128628
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,567,Depressive disorders,1,Number,2023,108869.30898767443,130723.59735881806,91630.90746753904
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,570,Bipolar disorder,1,Number,2023,37138.19498463776,46265.97436574844,29524.56768818058
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,571,Anxiety disorders,1,Number,2023,174586.69754458696,220193.27617819177,131467.21445603526
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,572,Eating disorders,1,Number,2023,25962.15883251844,34519.3636197306,19827.24951944397
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,575,Autism spectrum disorders,1,Number,2023,78642.73423229408,118111.98345836764,49086.92092891726
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,578,Attention-deficit/hyperactivity disorder,1,Number,2023,59508.68541841897,81066.52196595256,41986.19594830919
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,579,Conduct disorder,1,Number,2023,14560.321204405804,18512.67580651669,10696.80095908272
+1,All Population,5,Prevalence,69,Singapore,3,Both,22,All ages,582,Idiopathic developmental intellectual disability,1,Number,2023,6666.292119711452,18677.44301978031,1024.4907960269074
